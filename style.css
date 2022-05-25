@@ -1,75 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #f6f9fc;
+:root{
+    --color-main: #1ABC9C;
+    --color-text: #6b7c93;
 }
 
-.wrapper{
-    max-width: 400px;
-    margin: 0 auto;
+body {
+    background-color: #f6fcf9;
+    font-family: 'Inter', sans-serif;;
 }
 
 h1 {
-    text-align: center;
+    color: var(--color-text);
+    font-size: 1.7rem;
     margin: 60px 0 40px 0;
-    font-size: 1.5rem;
-    color: #6b7c93;
-    font-family: sans-serif;
-    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 400px;
 }
 
 .item-list{
     background-color: white;
     border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(55, 90, 50, 0.1);
     margin-bottom: 20px;
-    padding: 10px;
-    box-shadow: 0 2px 6px rgba(50, 50, 90, .1);
+    padding: 1rem;
+    transition: .3s ease-in-out;  
 }
 
-.faq-title{
+.item-list:hover{
+    background-color: var(--color-main);
+}
+
+.item-list:hover .title,
+.item-list:hover .card-content{
+    color: white;
+}
+
+.title{
+    color: var(--color-main);
     cursor: pointer;
-    padding: 10px;
-    font-size: 1.4rem;
     font-family: monospace;
-    color: #8f6ed5;
+    font-size: 1.4rem;
+    padding: 10px;
 }
 
-.faq-title::before{
-    content: '';
-    display: inline-block;
-    height: 12px;
-    width: 24px;
-    margin-right: 10px;
-    background-color: #beb0f4;
-}
-
-.faq-title::after{
+.title::after{
     content: '+';
     float: right;
-    transition: transform .3s ease;
+    transition: .5s ease;
 }
 
-.faq-content{
-    padding: 10px;
-    color: #6b7c93;
-    font-family: sans-serif;
-    font-size: .875rem;
-    line-height: 1.4rem;
+.card-content{
+    color: var(--color-text);
     display: none;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    padding: 0.8rem;
 }
 
+/*hiding checkbox input */
 .trigger-input{
     display: none;
 }
 
-.trigger-input:checked + .trigger-wrapper .faq-content{
+/* this will make the content appear when the checkbox is checked */
+.trigger-input:checked + .trigger-wrapper .card-content{
     display: block;
 }
 
-.trigger-input:checked + .trigger-wrapper .faq-title::after{
-    transform: rotate(45deg) scale(1.02);
+/* this will make the "::after" content rotates when the checkbox is checked */
+.trigger-input:checked + .trigger-wrapper .title::after{
+    transform: rotate(45deg) scale(1);
 }
