@@ -1,4 +1,4 @@
-# hidden Checkbox Trigger
+# Hidden Checkbox Trigger
  Cards with a simple trigger using only the checked/not checked status of a checkbox input.
 
 
