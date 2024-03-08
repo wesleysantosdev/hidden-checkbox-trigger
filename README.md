@@ -18,7 +18,6 @@ This is a simple project to study how to work with checkboxes as trigger to reve
 
 - <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">HTML5</a>
 - <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">CSS3</a>
-- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>
 
 ## Layout preview
 You can also watch this short preview of how it looks:
